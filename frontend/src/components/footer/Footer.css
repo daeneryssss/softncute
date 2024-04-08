@@ -1,0 +1,36 @@
+@import url(../../main.css);
+
+.Footer {
+    height: 200px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    border-top: 1px solid #000000;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.FooterText {
+    font-size: 20px;
+    height: 15%;
+}
+
+.SocialLinks {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.SocialLinks a {
+    height: 100%;
+    width: 5%;
+    padding: 1%;
+}
+
+.SocialLinkIcon {
+    height: 100%;
+}

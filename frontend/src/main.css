@@ -1,0 +1,55 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Main {
+    padding: 2%;
+}
+
+.WelcomeText {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.MainText {
+    font-size: 30px;
+    margin: 1%;
+}
+
+.ItemSection {
+    margin: 1%;
+}
+
+.ItemName {
+    font-size: 24px;
+}
+
+.Price {
+    font-size: 20px;
+}
+
+.AmountAvailable {
+    font-size: 20px;
+}
+
+.ItemDescription {
+    font-size: 18px;
+}
+
+.Contact {
+    list-style: circle inside;
+    margin: 1%;
+    font-size: 18px;
+}
