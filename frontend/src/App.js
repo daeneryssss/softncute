@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import Profile from './pages/Profile'
 import Cart from './pages/Cart';
+import Order from './pages/Order';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -30,6 +31,7 @@ function App() {
         <Route path='/registration' element={<Registration />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/order' element={<Order />} />
       </Routes>
       </BrowserRouter>
       <Footer />

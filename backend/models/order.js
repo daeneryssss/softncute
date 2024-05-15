@@ -2,15 +2,22 @@ import mongoose from 'mongoose';
 
 const orderSchema = mongoose.Schema({
     client: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        type: String,
         required: true
     },
-    order: [{
+    orderItems: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'OrderItem',
         required: true
     }],
+    phone: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
     country: {
         type: String,
         required: true
@@ -28,11 +35,7 @@ const orderSchema = mongoose.Schema({
         required: true
     },
     postcode: {
-        type: Number,
-        required: true
-    },
-    phone: {
-        type: Number,
+        type: String,
         required: true
     }
 });

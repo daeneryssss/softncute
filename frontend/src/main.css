@@ -7,10 +7,16 @@
 
 body {
     font-family: 'Cormorant Garamond', serif;
+    color: #11001a;
+    background-color: #fdfaff;
 }
 
 a {
     text-decoration: none;
+}
+
+a:visited {
+    color: #11001a;
 }
 
 .Main {
@@ -28,12 +34,31 @@ a {
     margin: 1%;
 }
 
+.ItemsMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .ItemSection {
     margin: 1%;
+    padding: 1%;
+    width: 40%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #11001a;
+    background-color: #efcfff;
 }
 
 .ItemName {
     font-size: 24px;
+    font-weight: 700;
+}
+
+.ItemImage {
+    width: 200px;
 }
 
 .Price {
@@ -48,8 +73,140 @@ a {
     font-size: 18px;
 }
 
+.SelectAmount {
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    padding: 1%;
+}
+
+.Button {
+    background-color: #fdfaff;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 1%;
+}
+
+.ButtonAddToCart {
+    width: 25%;
+    display: inline-block;
+    margin: 0 1%;
+}
+
+.InputItemAmount {
+    width: 30%;
+    font-size: 16px;
+    text-align: center;
+}
+
 .Contact {
     list-style: circle inside;
     margin: 1%;
     font-size: 18px;
+}
+
+.CartMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orderHeader {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.orderInCart {
+    background-color: #efcfff;
+    width: 90%;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+.orderDetails {
+    padding: 1%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.orderItemName {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.orderItemImage {
+    width: 15%;
+}
+
+.finalSum {
+    font-size: 30px;
+    margin: 1%;
+}
+
+.ButtonDeleteFromCart {
+    width: 17%;
+}
+
+.ButtonSendOrder {
+    width: 20%;
+    padding: 0.5%;
+    text-align: center;
+    border: 1px solid #a926ef;
+    color: #a926ef;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.ButtonSendOrder:hover, .ButtonBackToCart:hover{
+    background-color: #c4a4d5;
+    color: #fdfaff;
+}
+
+.ButtonBackToCart {
+    width: 25%;
+    padding: 0.5%;
+    text-align: center;
+    border: 1px solid #a926ef;
+    color: #a926ef;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.orderForm {
+    width: 50%;
+    margin: 1% auto;
+    padding: 1% 2%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 24px;
+    border: 1px solid #a926ef;
+}
+
+.orderForm input {
+    width: 100%;
+    height: 6%;
+    font-size: 20px;
+}
+
+.ButtonSubmitOrder {
+    width: 40%;
+    align-self: center;
+}
+
+#postcode::-webkit-outer-spin-button,
+#postcode::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#postcode {
+    -moz-appearance: textfield;
 }

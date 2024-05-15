@@ -3,7 +3,7 @@
 .PageHeader {
     height: 120px;
     width: 100%;
-    background-color: #96fd8d;
+    background-color: #c4a4d5;
     display: flex;
     padding: 1%;
     position: sticky;
@@ -53,6 +53,7 @@
 
 .ProfileMenuIcon {
     height: 90%;
+    display: none;
 }
 
 .CartMenuIcon {

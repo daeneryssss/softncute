@@ -9,10 +9,14 @@ const orderItemSchema = mongoose.Schema({
     amount: {
         type: Number,
         required: true,
-        min: 0
+        min: 1
+    },
+    sum: {
+        type: Number,
+        required: true
     }
 });
 
-const orderItem = mongoose.model('orderItem', orderItemSchema);
+const OrderItem = mongoose.model('OrderItem', orderItemSchema);
 
-export default orderItem;
+export default OrderItem;
