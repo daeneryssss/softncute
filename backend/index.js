@@ -1,17 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import multer from 'multer';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
 
 import Item from './models/item.js';
 import OrderItem from './models/orderItem.js';
+import Order from './models/order.js';
 
 const app = express();
 
 import 'dotenv/config';
-import Order from './models/order.js';
 
 const _port = process.env.PORT || 3000;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -84,18 +83,26 @@ app.delete('/cart/deleteItem/:id', async (req, res) => {
 app.post('/sendOrder', async (req, res) => {
     try {
         const { client, orderItems, phone, email, country, region, city, address, postcode } = req.body;
-        const orderItemIds = orderItems.map(itemId => mongoose.Types.ObjectId(itemId));
+        const orderItemIds = orderItems.map(itemId => new mongoose.Types.ObjectId(itemId));
         const newOrder = new Order({
-            client, orderItems: orderItemIds, phone, email, country, region, city, address, postcode
+            client,
+            orderItems: orderItemIds,
+            phone,
+            email,
+            country,
+            region,
+            city,
+            address,
+            postcode
         });
         await newOrder.save();
-        res.status(201).json({ message: 'Order send successfully', newOrder});
+        res.status(201).json({ message: 'Order sent successfully', newOrder });
         console.log(newOrder);
     } catch (error) {
         console.error('Error adding order:', error);
-        res.status(500).json({ error: 'Internal server error'});
-    };
-})
+        res.status(500).json({ error: 'Internal server error', details: error.message });
+    }
+});
 
 app.listen(_port, (error) => {
     if (!error) {

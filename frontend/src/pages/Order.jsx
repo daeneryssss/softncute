@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 const Order = () => {
@@ -10,8 +10,22 @@ const Order = () => {
         personsregion: "",
         personscity: "",
         personsaddress: "",
-        postcode: ""
+        postcode: "",
+        orderItems: []
     });
+
+    useEffect(() => {
+        Axios.get("http://localhost:3000/cart/items")
+        .then(response => {
+            setFormData({
+                ...formData,
+                orderItems: response.data.map(item => item._id)
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching order items:', error);
+        });
+    }, []);
 
     const handleChange = (e) => {
         setFormData({

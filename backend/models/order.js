@@ -35,7 +35,7 @@ const orderSchema = mongoose.Schema({
         required: true
     },
     postcode: {
-        type: String,
+        type: Number,
         required: true
     }
 });

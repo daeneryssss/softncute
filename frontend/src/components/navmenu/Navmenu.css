@@ -59,3 +59,41 @@
 .CartMenuIcon {
     height: 100%;
 }
+
+@media screen and (max-width: 1350px) {
+    .PageHeaderLogo {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .PageHeader {
+        height: 100px;
+    }
+
+    .PageHeaderLogo {
+        width: 44%;
+    }
+
+    .PageHeaderLogoText {
+        font-size: 28px;
+    }
+
+    .MenuItemLink {
+        font-size: 20px;
+    }
+
+    .CartMenuIcon {
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .PageHeaderLogo {
+        width: 20%;
+    }
+
+    .PageHeaderLogoText {
+        display: none;
+    }
+}

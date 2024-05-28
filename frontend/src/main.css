@@ -9,6 +9,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     color: #11001a;
     background-color: #fdfaff;
+    min-width: 420px;
 }
 
 a {
@@ -141,6 +142,7 @@ a:visited {
 
 .orderItemImage {
     width: 15%;
+    min-width: 150px;
 }
 
 .finalSum {
@@ -149,12 +151,12 @@ a:visited {
 }
 
 .ButtonDeleteFromCart {
-    width: 17%;
+    width: 21%;
 }
 
 .ButtonSendOrder {
-    width: 20%;
-    padding: 0.5%;
+    width: 25%;
+    padding: 1.5% 0.5%;
     text-align: center;
     border: 1px solid #a926ef;
     color: #a926ef;
@@ -179,8 +181,8 @@ a:visited {
 }
 
 .orderForm {
-    width: 50%;
-    margin: 1% auto;
+    width: 60%;
+    margin: 2% auto;
     padding: 1% 2%;
     height: 700px;
     display: flex;
@@ -209,4 +211,81 @@ a:visited {
 
 #postcode {
     -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1350px) {
+    .ItemSection {
+        width: 45%;
+        height: 500px;
+    }
+
+    .Button {
+        font-size: 14px;
+    }
+
+    .ButtonDeleteFromCart {
+        width: 25%;
+    }
+
+    .ButtonSendOrder {
+        font-size: 18px;
+        width: 30%;
+    }
+
+    .ButtonBackToCart {
+        font-size: 20px;
+    }
+
+    .orderForm {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .ItemSection {
+        width: 90%;
+        height: 450px;
+    }
+
+    .orderHeader {
+        font-size: 30px;
+    }
+    
+    .orderInCart {
+        height: 180px;
+        padding: 2%;
+    }
+
+    .orderItemName {
+        font-size: 20px;
+    }
+
+    .finalSum {
+        font-size: 24px;
+    }
+
+    .ButtonDeleteFromCart {
+        width: 69%;
+        padding: 1% 0;
+    }
+
+    .ButtonSendOrder {
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .ButtonBackToCart {
+        font-size: 16px;
+    }
+
+    .orderForm {
+        font-size: 18px;
+        width: 70%;
+        height: 600px;
+    }
+
+    .orderForm input {
+        width: 100%;
+        font-size: 16px;
+    }
 }
